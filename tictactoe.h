@@ -1,7 +1,3 @@
-//
-// Created by semyon on 21/02/2021.
-//
-
 #ifndef SB_ASSIGNMENT_14_6_TICTACTOE_H
 #define SB_ASSIGNMENT_14_6_TICTACTOE_H
 

@@ -1,6 +1,7 @@
 #include <iostream>
 #include "caesar.h"
 #include "tictactoe.h"
+#include "email.h"
 
 void test1(){
     std::string test_s = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
@@ -18,8 +19,14 @@ void test2(){
     std::cout << checkGame(line1, line2, line3);
 }
 
+void test3(){
+    std::string testStr = "i_like_underscore@but_its_not_allow_in _this_part.example.com";
+    std::cout << checkEmail(testStr) << "\n";
+}
+
 int main() {
 //    test1();
-    test2();
+//    test2();
+    test3();
     return 0;
 }
