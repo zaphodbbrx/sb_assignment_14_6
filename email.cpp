@@ -43,7 +43,7 @@ bool allowed(char c, bool isSecondPart){
 
 bool checkSymbols(std::string & address, bool isSecondPart){
     char prevSymbol = '.';
-    if (address[0] == '.') return false;
+    if (address[address.length() - 1] == '.') return false;
     for (char c : address){
             if (!allowed(c, isSecondPart)) return false;
             if (c == '.' && prevSymbol == '.') return false;
