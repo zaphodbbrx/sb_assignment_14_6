@@ -17,6 +17,11 @@
 65.123..9 (две точки подряд)
 a.b.c.d (посторонние символы, помимо цифр и точек)
 */
+bool checkNum(std::string str){
+    if (str.length() == 0) return false;
+    int currentNum = std::stoi(str);
+    return (currentNum >= 0 && currentNum <= 255) && (std::to_string(currentNum).length() == str.length());
+}
 std::string checkIP(std::string & ipAddress){
     char prevSymbol = '.';
     int numDots = 0;
@@ -28,9 +33,7 @@ std::string checkIP(std::string & ipAddress){
             currentStr += c;
         } else if (c == '.') {
             numDots++;
-            currentNum = std::stoi(currentStr);
-            if (currentNum < 0 || currentNum > 255) return "No";
-            if (std::to_string(currentNum).length() != currentStr.length()) return "No";
+            if (!checkNum(currentStr)) return "No";
             if (numDots > 3) return "No";
             currentStr = "";
         }else{
@@ -39,5 +42,6 @@ std::string checkIP(std::string & ipAddress){
         prevSymbol = c;
     }
     if (numDots != 3) return "No";
+    if (!checkNum(currentStr)) return "No";
     return "Yes";
 }

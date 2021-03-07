@@ -28,12 +28,16 @@ void test2(){
 }
 
 void test3(){
-    std::string testStr = "i_like_underscore@but_its_not_allow_in _this_part.example.com";
+    std::string testStr;
+    std::cout << "Enter email address\n";
+    std::getline(std::cin, testStr);
     std::cout << checkEmail(testStr) << "\n";
 }
 
 void test4(){
-    std::string testStr = "192.168.O10.1";
+    std::string testStr;
+    std::cout << "Enter ip address\n";
+    std::getline(std::cin, testStr);
     std::cout << checkIP(testStr) << "\n";
 }
 
@@ -46,9 +50,9 @@ void test5(){
 
 int main() {
 //    test1();
-    test2();
+//    test2();
 //    test3();
-//    test4();
+    test4();
 //    test5();
     return 0;
 }
