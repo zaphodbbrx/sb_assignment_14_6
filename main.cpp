@@ -18,10 +18,12 @@ void test1(){
 
 void test2(){
     std::string line1, line2, line3;
-    line1 = "O..";
-    line2 = "...";
-    line3 = "..a";
-
+    std::cout << "\nEnter line1";
+    std::getline(std::cin, line1);
+    std::cout << "\nEnter line2";
+    std::getline(std::cin, line2);
+    std::cout << "\nEnter line3";
+    std::getline(std::cin, line3);
     std::cout << checkGame(line1, line2, line3);
 }
 
@@ -43,8 +45,8 @@ void test5(){
 }
 
 int main() {
-    test1();
-//    test2();
+//    test1();
+    test2();
 //    test3();
 //    test4();
 //    test5();
