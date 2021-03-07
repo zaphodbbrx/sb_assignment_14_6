@@ -38,6 +38,7 @@ char convertChar(char c, int n){
 
 std::string encryptCaesar(std::string s, int n){
     std::string res;
+    n = n >= 26 || n <= -26 ? n % 26 : n;
     for (char c : s){
         res += convertChar(c, n);
     }
